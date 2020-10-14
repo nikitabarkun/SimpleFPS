@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BaseCharacterController.cs" />
+    <Compile Include="Assets\Scripts\Mirror.cs" />
     <Compile Include="Assets\Scripts\MouseController.cs" />
     <Compile Include="Assets\Scripts\WeaponController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
