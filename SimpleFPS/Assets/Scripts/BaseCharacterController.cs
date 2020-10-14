@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 
 public class BaseCharacterController : MonoBehaviour
 {
@@ -20,7 +16,7 @@ public class BaseCharacterController : MonoBehaviour
 
     private float _previousY;
 
-    protected void Awake()
+    private void Awake()
     {
         _transform = transform;
         _cameraTransform = GetComponentInChildren<Camera>().transform;
@@ -28,12 +24,12 @@ public class BaseCharacterController : MonoBehaviour
         _previousY = _transform.position.y;
     }
 
-    protected void Update()
+    private void Update()
     {
         Move();
     }
 
-    protected void Move()
+    private void Move()
     {
         if (Input.GetKey(forwardKey))
         {

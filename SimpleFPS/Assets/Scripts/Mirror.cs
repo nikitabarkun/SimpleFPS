@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Mirror : MonoBehaviour
 {
@@ -12,7 +10,8 @@ public class Mirror : MonoBehaviour
         _renderer = GetComponent<Renderer>();
         _camera = GetComponentInChildren<Camera>();
 
-        var texture = new RenderTexture(256, 256, 16, RenderTextureFormat.ARGB32);
+        //R8 просто выглядит круто :)
+        var texture = new RenderTexture(256, 256, 16, RenderTextureFormat.R8);
         texture.Create();
 
         _renderer.material.SetTexture("_MainTex", texture);

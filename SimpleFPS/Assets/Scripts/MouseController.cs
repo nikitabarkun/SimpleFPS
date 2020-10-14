@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MouseController : MonoBehaviour
 {
@@ -15,7 +12,7 @@ public class MouseController : MonoBehaviour
     private Transform _transform;
     private Transform _cameraTransform;
 
-    protected void Awake()
+    private void Awake()
     {
         _weaponController = GetComponent<WeaponController>();
 
