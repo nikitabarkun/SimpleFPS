@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 17341296}
   - component: {fileID: 17341298}
   - component: {fileID: 17341297}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: WeaponPart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,6 @@ GameObject:
   m_Component:
   - component: {fileID: 301714828}
   - component: {fileID: 301714830}
-  - component: {fileID: 301714829}
   m_Layer: 0
   m_Name: WeaponCamera
   m_TagString: Untagged
@@ -291,14 +290,6 @@ Transform:
   m_Father: {fileID: 534669905}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &301714829
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301714827}
-  m_Enabled: 1
 --- !u!20 &301714830
 Camera:
   m_ObjectHideFlags: 0
@@ -321,12 +312,12 @@ Camera:
     y: 0
     width: 0.5
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: 2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 512
@@ -376,7 +367,7 @@ Camera:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
@@ -389,15 +380,15 @@ Camera:
     y: 0
     width: 0.5
     height: 1
-  near clip plane: 0.2
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1335
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -635,7 +626,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1066773378}
   - component: {fileID: 1066773380}
-  - component: {fileID: 1066773379}
   m_Layer: 0
   m_Name: WeaponCamera
   m_TagString: Untagged
@@ -658,14 +648,6 @@ Transform:
   m_Father: {fileID: 1112165643}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1066773379
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066773377}
-  m_Enabled: 1
 --- !u!20 &1066773380
 Camera:
   m_ObjectHideFlags: 0
@@ -693,10 +675,10 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -2
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -718,7 +700,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1112165643}
   - component: {fileID: 1112165645}
-  - component: {fileID: 1112165644}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -741,14 +722,6 @@ Transform:
   m_Father: {fileID: 1423759581}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!81 &1112165644
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112165642}
-  m_Enabled: 1
 --- !u!20 &1112165645
 Camera:
   m_ObjectHideFlags: 0
@@ -758,7 +731,7 @@ Camera:
   m_GameObject: {fileID: 1112165642}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
@@ -779,7 +752,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 823
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -800,7 +773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1286028084}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1334,7 +1307,7 @@ GameObject:
   - component: {fileID: 1715774660}
   - component: {fileID: 1715774662}
   - component: {fileID: 1715774661}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: WeaponPart4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1411,7 +1384,7 @@ GameObject:
   - component: {fileID: 1802459224}
   - component: {fileID: 1802459226}
   - component: {fileID: 1802459225}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: WeaponPart3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1580,7 +1553,7 @@ GameObject:
   - component: {fileID: 1935489385}
   - component: {fileID: 1935489387}
   - component: {fileID: 1935489386}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: WeaponPart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1657,6 +1630,8 @@ GameObject:
   - component: {fileID: 2069916941}
   - component: {fileID: 2069916942}
   - component: {fileID: 2069916943}
+  - component: {fileID: 2069916945}
+  - component: {fileID: 2069916944}
   m_Layer: 0
   m_Name: MainCharacter
   m_TagString: Untagged
@@ -1671,7 +1646,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069916940}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.5, z: 0, w: 0.8660254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1679,7 +1654,7 @@ Transform:
   - {fileID: 534669905}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 60, z: 0}
 --- !u!114 &2069916942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1706,5 +1681,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 549dd954f88ac4b499d164ceaf6fdf47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &2069916944
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069916940}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 422f850bb8f7649c88912eeee1bb7b91, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2069916945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069916940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f801b8fad63e4faaa549bd9080a43c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

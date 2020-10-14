@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,11 +10,15 @@ public class MouseController : MonoBehaviour
 
     private Vector2 _relativeRotation = Vector2.zero;
 
+    private WeaponController _weaponController;
+
     private Transform _transform;
     private Transform _cameraTransform;
 
     protected void Awake()
     {
+        _weaponController = GetComponent<WeaponController>();
+
         _transform = transform;
         _cameraTransform = GetComponentInChildren<Camera>().transform;
     }
@@ -21,6 +26,15 @@ public class MouseController : MonoBehaviour
     private void Update()
     {
         Rotate();
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            _weaponController.Zoom();
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            _weaponController.Unzoom();
+        }
     }
 
     private void Rotate()

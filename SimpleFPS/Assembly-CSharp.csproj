@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BaseCharacterController.cs" />
     <Compile Include="Assets\Scripts\MouseController.cs" />
+    <Compile Include="Assets\Scripts\WeaponController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/nikitaba/playtikaunityacademy/SimpleFPS/SimpleFPS/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
