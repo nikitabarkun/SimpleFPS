@@ -10,7 +10,6 @@ public class Mirror : MonoBehaviour
         _renderer = GetComponent<Renderer>();
         _camera = GetComponentInChildren<Camera>();
 
-        //R8 просто выглядит круто :)
         var texture = new RenderTexture(256, 256, 16, RenderTextureFormat.R8);
         texture.Create();
 
