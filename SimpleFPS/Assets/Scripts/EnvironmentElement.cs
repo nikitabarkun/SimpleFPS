@@ -5,10 +5,18 @@ using UnityEngine;
 
 public class EnvironmentElement : MonoBehaviour
 {
-    private readonly Color32 _defaultColor = new Color32(152, 152, 152, 255);
+    private Color32 _defaultColor;
 
+    private MeshRenderer _renderer;
+
+    private void Awake()
+    {
+        _renderer = GetComponent<MeshRenderer>();
+        _defaultColor = _renderer.material.color;
+    }
+    
     public void PaintToDefault()
     {
-        GetComponent<MeshRenderer>().material.color = _defaultColor;
+        _renderer.material.color = _defaultColor;
     }
 }
