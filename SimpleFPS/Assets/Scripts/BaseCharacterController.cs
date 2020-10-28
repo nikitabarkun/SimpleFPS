@@ -2,6 +2,8 @@
 
 public class BaseCharacterController : MonoBehaviour
 {
+    private readonly int IS_MOVING = Animator.StringToHash("isMoving");
+
     [SerializeField]
     private KeyCode forwardKey = KeyCode.W;
     [SerializeField]
@@ -14,12 +16,17 @@ public class BaseCharacterController : MonoBehaviour
     private Transform _transform;
     private Transform _cameraTransform;
 
+    private Animator _animator;
+
     private float _previousY;
+    private bool _isMoving = false;
 
     private void Awake()
     {
         _transform = transform;
         _cameraTransform = GetComponentInChildren<Camera>().transform;
+
+        _animator = GetComponent<Animator>();
 
         _previousY = _transform.position.y;
     }
@@ -31,25 +38,33 @@ public class BaseCharacterController : MonoBehaviour
 
     private void Move()
     {
+        _isMoving = false;
+
         if (Input.GetKey(forwardKey))
         {
             _transform.position += _cameraTransform.forward * Time.deltaTime;
+            _isMoving = true;
         }
 
         if (Input.GetKey(backKey))
         {
             _transform.position -= _cameraTransform.forward * Time.deltaTime;
+            _isMoving = true;
         }
 
         if (Input.GetKey(leftKey))
         {
             _transform.position -= _cameraTransform.right * Time.deltaTime;
+            _isMoving = true;
         }
 
         if (Input.GetKey(rightKey))
         {
             _transform.position += _cameraTransform.right * Time.deltaTime;
+            _isMoving = true;
         }
+
+        _animator.SetBool(IS_MOVING, _isMoving);
 
         _transform.position = new Vector3(_transform.position.x, _previousY, _transform.position.z);
     }

@@ -14,7 +14,7 @@ public class EnvironmentElement : MonoBehaviour
         _renderer = GetComponent<MeshRenderer>();
         _defaultColor = _renderer.material.color;
     }
-    
+
     public void PaintToDefault()
     {
         _renderer.material.color = _defaultColor;
