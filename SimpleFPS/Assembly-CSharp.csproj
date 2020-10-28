@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BaseCharacterController.cs" />
+    <Compile Include="Assets\Scripts\BehaviourScripts\AimLaserBehaviour.cs" />
     <Compile Include="Assets\Scripts\EnvironmentElement.cs" />
     <Compile Include="Assets\Scripts\Mirror.cs" />
     <Compile Include="Assets\Scripts\MouseController.cs" />

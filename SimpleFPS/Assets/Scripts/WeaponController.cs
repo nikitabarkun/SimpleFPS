@@ -10,10 +10,15 @@ public class WeaponController : MonoBehaviour
     [SerializeField]
     private AnimationClip alternativeShoot;
 
+    [SerializeField]
+    private GameObject aimGameObject;
+    public GameObject AimGameObject => aimGameObject;
+
     private AnimatorOverrideController _defaultController;
     private AnimatorOverrideController _alternativeController;
 
     private Animator _animator;
+
 
     private void Awake()
     {

@@ -37,7 +37,10 @@ public class MouseController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            _weaponController.Shoot();
+            if (Input.GetKey(KeyCode.Mouse1))
+            {
+                _weaponController.Shoot();
+            }
         }
     }
 
