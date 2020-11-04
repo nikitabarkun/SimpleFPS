@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using System.IO;
+using Player;
+using UnityEngine;
 
 public class BaseCharacterController : MonoBehaviour
 {
@@ -13,6 +16,9 @@ public class BaseCharacterController : MonoBehaviour
     [SerializeField]
     private KeyCode rightKey = KeyCode.D;
 
+    [SerializeField]
+    private PlayerInfoData characterInfo;
+    
     private Transform _transform;
     private Transform _cameraTransform;
 
@@ -34,6 +40,19 @@ public class BaseCharacterController : MonoBehaviour
     private void Update()
     {
         Move();
+    }
+
+    public void ApplyNewInfo(PlayerInfo newInfo)
+    {
+        characterInfo.Health = newInfo.health;
+        characterInfo.Speed = newInfo.speed;
+        characterInfo.FullName = newInfo.fullName;
+        var textureBase64 = Convert.FromBase64String(newInfo.base64Texture);
+
+        var texture = new Texture2D(128, 128);
+        texture.LoadImage(textureBase64);
+        characterInfo.Texture = texture;
+        GetComponentInChildren<MeshRenderer>().sharedMaterial.mainTexture = texture;
     }
 
     private void Move()

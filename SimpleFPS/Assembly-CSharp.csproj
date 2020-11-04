@@ -68,6 +68,10 @@
     <Compile Include="Assets\Scripts\EnvironmentElement.cs" />
     <Compile Include="Assets\Scripts\Mirror.cs" />
     <Compile Include="Assets\Scripts\MouseController.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInfo.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInfoApplier.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInfoData.cs" />
+    <Compile Include="Assets\Scripts\Tools\FileManager.cs" />
     <Compile Include="Assets\Scripts\WeaponController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/nikitaba/playtikaunityacademy/SimpleFPS/SimpleFPS/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

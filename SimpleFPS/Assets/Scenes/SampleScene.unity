@@ -1364,6 +1364,7 @@ MonoBehaviour:
   backKey: 274
   leftKey: 276
   rightKey: 275
+  characterInfo: {fileID: 0}
 --- !u!4 &1423759581
 Transform:
   m_ObjectHideFlags: 0
@@ -2459,6 +2460,7 @@ MonoBehaviour:
   backKey: 115
   leftKey: 97
   rightKey: 100
+  characterInfo: {fileID: 11400000, guid: 8b5c3675f21c449c693708eef7e1e934, type: 2}
 --- !u!114 &2069916943
 MonoBehaviour:
   m_ObjectHideFlags: 0
