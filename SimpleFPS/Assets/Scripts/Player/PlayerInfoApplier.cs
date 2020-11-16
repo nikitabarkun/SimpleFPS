@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.IO.Compression;
 using Tools;
 using UnityEditor;
@@ -22,10 +23,30 @@ namespace Player
             FileManager.DownloadAndExtract(URL, downloadPath, OUTPUT_PATH);
 
             var unpackedFilePath = Path.Combine(OUTPUT_PATH, UNPACKED_FILENAME);
-            var textFromJson = File.ReadAllText(unpackedFilePath);
-            var info = JsonUtility.FromJson<PlayerInfo>(textFromJson);
+            var info = ReadPlayerInfo(unpackedFilePath);
 
             player.GetComponent<BaseCharacterController>().ApplyNewInfo(info);
+        }
+
+        private static PlayerInfo ReadPlayerInfo(string path)
+        {
+            try
+            {
+                var textFromJson = File.ReadAllText(path);
+                var info = JsonUtility.FromJson<PlayerInfo>(textFromJson);
+
+                return info;
+            }
+            catch (FileNotFoundException e)
+            {
+                Debug.Log($"File not found: {e.FileName}");
+                throw;
+            }
+            catch (IOException e)
+            {
+                Debug.Log($"File could not be read: {e.Source}");
+                throw;
+            }
         }
     }
 }

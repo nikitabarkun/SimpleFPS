@@ -27,11 +27,26 @@ namespace Tools
             };
         }
 
-        public static void ExtractToDirectory(string path, string outputPath)
+        private static void ExtractToDirectory(string path, string outputPath)
         {
-            Directory.CreateDirectory(outputPath);
+            try
+            {
+                Directory.CreateDirectory(outputPath);
 
-            ZipFile.ExtractToDirectory(path, outputPath);
+                ZipFile.ExtractToDirectory(path, outputPath);
+            }
+            catch (DirectoryNotFoundException e)
+            {
+                Debug.Log("The specified path is invalid.");
+            }
+            catch (IOException)
+            {
+                Debug.Log("Could not extract archive: probably it already have been unpacked.");
+            }
+            catch (Exception)
+            {
+                Debug.Log("Could not extract archive.");
+            }
         }
     }
 }
